@@ -25,16 +25,16 @@
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false
   },
   "MyUser": {
     "dataSource": "mysql",
-    "public": false
+    "public": true
   },
   "Student": {
     "dataSource": "mysql",
@@ -62,6 +62,6 @@
   },
   "Enrollment": {
     "dataSource": "mysql",
-    "public": true
+    "public": false
   }
 }

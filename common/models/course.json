@@ -17,6 +17,10 @@
       "type": "hasMany",
       "model": "Program",
       "through": "ProgramCourse"
+    },
+    "teacher": {
+      "type": "belongsTo",
+      "model": "Teacher"
     }
   },
   "acls": [],
