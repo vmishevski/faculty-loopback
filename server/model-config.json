@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "MyUser": {
+    "dataSource": "mysql",
+    "public": false
+  },
+  "Student": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Teacher": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Program": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "ProgramEnrollment": {
+    "dataSource": "mysql",
+    "public": false
+  },
+  "Course": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "ProgramCourse": {
+    "dataSource": "mysql",
+    "public": false
+  },
+  "Enrollment": {
+    "dataSource": "mysql",
+    "public": true
+  }
+}

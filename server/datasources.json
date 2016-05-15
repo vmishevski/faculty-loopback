@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysql": {
+    "host": "192.168.5.22",
+    "port": 3306,
+    "database": "gi_lms_vojche_two",
+    "password": "!@#qweASDzxc",
+    "name": "mysql",
+    "user": "gi_lms",
+    "connector": "mysql"
+  }
+}

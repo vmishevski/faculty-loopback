@@ -1,0 +1,32 @@
+{
+  "name": "Enrollment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dateEnrolled": {
+      "type": "date",
+      "required": true
+    },
+    "completed": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "course": {
+      "type": "belongsTo",
+      "model": "Course"
+    },
+    "student": {
+      "type": "belongsTo",
+      "model": "Student"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

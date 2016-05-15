@@ -1,0 +1,29 @@
+{
+  "name": "Program",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "students": {
+      "type": "hasMany",
+      "model": "Student",
+      "through": "ProgramEnrollment"
+    },
+    "courses": {
+      "type": "hasMany",
+      "model": "Course",
+      "through": "ProgramCourse"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

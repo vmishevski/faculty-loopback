@@ -1,0 +1,32 @@
+{
+  "name": "ProgramEnrollment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "completed": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "dateEnrolled": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "student": {
+      "type": "belongsTo",
+      "model": "Student"
+    },
+    "program": {
+      "type": "belongsTo",
+      "model": "Program"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
