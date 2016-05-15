@@ -40,9 +40,13 @@ module.exports = function(app) {
           return reject(err);
         }
 
-        console.log(course.id == userId ? 'user is teacher' : 'user not teacher of the course');
+        if(!course){
+          return cb(null, false);
+        }
 
-        return cb(null, course.id == userId);
+        console.log(course.teacherId == userId ? 'user is teacher' : 'user not teacher of the course');
+
+        return cb(null, course.teacherId == userId);
       });
 
     });

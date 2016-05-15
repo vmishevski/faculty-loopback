@@ -153,6 +153,8 @@ module.exports = function (app) {
                 dateEnrolled: new Date()
               });
 
+              enrollment.course(mathOne);
+
               student.enrollments.create(enrollment, function (err) {
                 innerCb(err);
               });
