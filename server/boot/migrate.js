@@ -136,13 +136,13 @@ module.exports = function (app) {
           return cb(err);
         }
 
-        app.models.Course.find({where: {name: 'math I'}}, function(err, courses){
+        app.models.Course.find({where: {name: 'math III'}}, function(err, courses){
           if(err){
             return cb(err);
           }
 
           if(!courses.length){
-            return cb(new Error('math I course not found'));
+            return cb(new Error('math III course not found'));
           }
 
           var mathOne = courses[0];
@@ -170,15 +170,30 @@ module.exports = function (app) {
       });
     }
 
-    function cmigrateTeachers(cb){
+    function migrateTeachers(cb){
       app.models.Teacher.create({
-        name: 'Math teacher'
+        username: 'MathTeacher',
+        password: 'voislav',
+        email: 'voislav@yopmail.com'
       }, function (err, teacher) {
         if(err){
           return cb(err);
         }
 
-        
+        console.log('created teacher', teacher);
+
+        app.models.Course.find({where: {name: /math III/}}, function (err, courses) {
+          if(err){
+            return cb(err);
+          }
+
+          var course = courses[0];
+          course.teacher(teacher);
+          course.save(function (err) {
+            cb(err);
+          });
+        });
+
       })
     }
   })

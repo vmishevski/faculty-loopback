@@ -62,6 +62,6 @@
   },
   "Enrollment": {
     "dataSource": "mysql",
-    "public": false
+    "public": true
   }
 }
